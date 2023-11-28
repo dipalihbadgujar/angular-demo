@@ -1,0 +1,49 @@
+<p>login works!</p>
+<!-- <*ng If-else-then block practice example> -->
+<label for="" class="fw-bold">Contact Preference: </label>
+<div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="Email" [(ngModel)]="contactPreference">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Email
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="Mobile" [(ngModel)]="contactPreference">
+    <label class="form-check-label" for="flexRadioDefault2">
+      Mobile
+    </label>
+  </div>
+<p *ngIf="contactPreference =='Mobile';then thenBlock; else elseBlock"></p>
+
+<ng-template #thenBlock>
+    <div class="mb-3">
+        <label for="id1" class="form-label">Mobile</label>
+        <input type="text" class="form-control" id="id1" name="uName">
+    </div>
+</ng-template>
+
+<ng-template #elseBlock>
+    <div class="mb-3">
+        <label for="id2" class="form-label">Email</label>
+        <input type="text" class="form-control" id="id2" name="email">
+    </div>
+</ng-template>
+ <h3>List of Courses</h3>
+<ul>
+    <li *ngFor="let courses of listofcourses;let i=index">{{courses}}</li> 
+    <li *ngFor="let course of listofcourses;let i=index"> {{i+1}}-{{course}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let course of listofcourses;let i=index;let o=odd"> {{i+1}}- <span>--{{o}}--{{course}}</span></li>
+</ul>
+
+<ul>
+    <li *ngFor="let course of listofcourses;let i=index;let e=even">{{i+0}}- <span>--{{e}}--{{course}}</span></li>
+</ul>
+  
+
+<select name=" " id="" class="w-25">
+    <option value="">Select</option>
+    <option *ngFor="let item of listofcourses ">{{item}}</option>
+</select>

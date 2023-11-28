@@ -1,0 +1,36 @@
+<!-- <p>age-calculator works!</p>
+<h3><b>Age Calculator</b></h3>
+<P>Date of Birth</P>
+<input type="text" name="date" id="date" placeholder="dd" minlength="1" maxlength="2">
+<br>
+<br>
+<P>Month</P>
+<input type="text" name="month" id="month" placeholder="mm" minlength="1" maxlength="2">
+<br>
+<br>
+<P>Year</P>
+<input type="text" name="year" id="year" placeholder="yyyy" minlength="1" maxlength="2">
+<br>
+<br>
+<input type="button" name="submit" value="submit" oneclick="age()">
+
+ -->
+
+ <!-- <div class="col-md-4">
+    <span class="">
+      <label for="Contract End Date">Date of birth</label>
+      <input formControlName="contract_end_date" pInputText class="w-100" type="date"
+        placeholder="Contract End Date" required />
+    </span>
+  </div>
+  today date :{{todaysdate}} -->
+
+  <div class="age-calculator">
+    <h2>Age Calculator</h2>
+    <div>
+      <label for="birthdate">Enter Birthdate:</label>
+      <input type="date" id="birthdate" [(ngModel)]="birthdate" />
+    </div>
+    <button (click)="calculateAge()">Calculate Age</button>
+    <p *ngIf="age !== null">Your age is {{ age }} years.</p>
+  </div>

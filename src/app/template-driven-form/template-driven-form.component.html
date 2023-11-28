@@ -1,0 +1,30 @@
+<p>template-driven-form works!</p>
+<h3 class="text-center">Template Driven Form</h3>
+
+<div class="container mt-5">
+    <form #userRegForm="ngForm" (ngSubmit)="save(userRegForm)">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <label for="id1" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="id1" name="fName" [(ngModel)]="userForm.firstName">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="id2" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="id2" name="lName" [(ngModel)]="userForm.lastName">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="id3" class="form-label">Mobile No</label>
+                <input type="text" class="form-control" id="id3" name="mobNo" [(ngModel)]="userForm.mobileNo">
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="id3" class="form-label">Email Address</label>
+                <input type="text" class="form-control" id="id3" name="email" [(ngModel)]="userForm.email">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
+<p>Submitted : {{userRegForm.submitted}}</p> 
+<p>valid:{{userRegForm.valid}}</p>

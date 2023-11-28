@@ -1,0 +1,59 @@
+<h1>Data Binding Concept example</h1>
+
+<h2><b>first property is Interpolation</b></h2>
+<h3>Full Name:{{FullName}}</h3>
+<h3>Address : {{Address}}</h3>
+<table>
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            {{(myObj.Name)}}
+        </td>
+    </tr>
+    <tr>
+        <td>Designation</td>
+        <td>{{(myObj.Desgination)}}</td>
+    </tr>
+    <tr>
+        <td>Salary
+        </td>
+        <td>
+            {{(myObj.Salary)|currency}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Company
+        </td>
+        <td>
+            {{(myObj.Company)}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Skills
+        </td>
+        <td>
+            {{myObj.Skills[0]}},{{myObj.Skills[1]}},{{myObj.Skills[2]}}
+        </td>
+    </tr>
+</table>
+<br><br>
+<button type="button" [disabled]="disablebttn">Login</button>
+
+<img [src]="imagepath" alt="path not found">
+<br><br>
+<h3>{{message1 | uppercase}}</h3>
+<h3>{{message1 | lowercase}}</h3>
+<h3>{{message1 | titlecase}}</h3>
+<h4>{{message2| uppercase}}</h4>
+<h4>Annual Salary is {{ Annual_Salary | currency:'INR'}}</h4>
+<h3>Today's Date: {{todaysDate}}</h3>
+<h3>Todays Date with Pipe: {{todaysDate | date}}</h3>
+<h3>Short Date : {{todaysDate | date:'shortDate'}}</h3>
+<h3>Medium Date : {{todaysDate | date:'mediumDate'}}</h3>
+<h3>Date in dd/mm/yyyy : {{todaysDate | date:'dd/MM/yyyy'}}</h3>
+
+

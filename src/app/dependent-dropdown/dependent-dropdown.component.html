@@ -1,0 +1,21 @@
+<h1>Category and Item Selection</h1>
+
+<!-- Category Dropdown -->
+<label for="category">Select Category:</label>
+<select id="category" [(ngModel)]="selectedCategory">
+  <option value="" selected>Select Category</option>
+  <option value="Fruits">Fruits</option>
+  <option value="Grains">Grains</option>
+</select>
+
+<!-- Item Dropdown -->
+<label for="item">Select Item:</label>
+<select id="item" [(ngModel)]="selectedSubItem">
+  <option value="" selected>Select Item</option>
+  <ng-container *ngIf="selectedCategory == 'Fruits'">
+    <option *ngFor="let item of categories.Fruits" [value]="item">{{ item }}</option>
+  </ng-container>
+  <ng-container *ngIf="selectedCategory == 'Grains'">
+    <option *ngFor="let item of categories.foodgrains" [value]="item">{{ item }}</option>
+  </ng-container>
+</select>

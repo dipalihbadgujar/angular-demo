@@ -1,0 +1,56 @@
+<h4 class="text-center">Product List</h4>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Sr No</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of productList;let i=index">
+            <th scope="row">{{i}}</th>
+            <td>{{product.productName}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+
+<h3 text align="text-center">Ng-Switch Example</h3>
+
+<div class="container w=50 mt=5">
+<h5>Select Day</h5>
+<select name="" id="" class="w-25 mb-2" [(ngModel)]="selectedDay">
+    <option value="">Select</option>
+    <option *ngFor="let item of weekdays" [value]="item">{{item}}</option>
+</select>
+
+Selected Day: {{selectedDay}}
+<!-- <h6 *ngIf="selectedDay == 'Sunday'">Today is Sunday</h6>
+    <h6 *ngIf="selectedDay == 'Monday'">Today is Monday</h6>
+    <h6 *ngIf="selectedDay == 'Tuesday'">Today is Tuesday</h6>
+    <h6 *ngIf="selectedDay == 'Wednesday'">Today is Wednesday</h6>
+    <h6 *ngIf="selectedDay == 'Thursday'">Today is Thursday</h6>
+    <h6 *ngIf="selectedDay == 'Friday'">Today is Friday</h6>
+    <h6 *ngIf="selectedDay == 'Saturday'">Today is Saturday</h6>
+    <h6 *ngIf="selectedDay != 'Monday' && selectedDay != 'Sunday'">No Match Found</h6>
+
+</div>
+<h4>Thank you</h4> -->
+
+<!-- Ng switch case -->
+<div [ngSwitch]="selectedDay">
+    <h6 *ngSwitchCase="'Sunday'">Today is Sunday</h6>
+    <h6 *ngSwitchCase="'Monday'">Today is Monday</h6>
+    <h6 *ngSwitchCase="'Tuesday'">Today is Tuesday</h6>
+    <h6 *ngSwitchCase="'Wednesday'">Today is Wednesday</h6>
+    <h6 *ngSwitchCase="'Thursday'">Today is Thursday</h6>
+    <h6 *ngSwitchCase="'Friday'">Today is Friday</h6>
+    <h6 *ngSwitchCase="'Saturday'">Today is Saturday</h6>
+    <h6 *ngSwitchDefault>No Match Found</h6>
+</div>
