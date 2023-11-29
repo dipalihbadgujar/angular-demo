@@ -10,4 +10,6 @@ export class AppComponent {
 
   message:string="welcome to Github & Git"
   message2:string="welcome to Angular Development Course"
+
+  message3:string="Welcome to the new World"
 }
