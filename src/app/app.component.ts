@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'my-curd-app';
+
+  message:string="welcome to Github & Git"
+  message2:string="welcome to Angular Development Course"
 }
