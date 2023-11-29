@@ -9,4 +9,5 @@ export class AppComponent {
   title = 'my-curd-app';
 
   message:string="welcome to Github & Git"
+  message2:string="welcome to Angular Development Course"
 }
