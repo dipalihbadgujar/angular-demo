@@ -3,6 +3,7 @@
 <h2><b>first property is Interpolation</b></h2>
 <h3>Full Name:{{FullName}}</h3>
 <h3>Address : {{Address}}</h3>
+<h4>Mera Name:{{MeraName}}</h4>
 <table>
     <tr>
         <td>
@@ -39,9 +40,18 @@
             {{myObj.Skills[0]}},{{myObj.Skills[1]}},{{myObj.Skills[2]}}
         </td>
     </tr>
+    <tr>
+        <td>
+            Goal
+        </td>
+        <td>
+            {{(myObj.Goal)}}
+        </td>
+    </tr>
 </table>
 <br><br>
 <button type="button" [disabled]="disablebttn">Login</button>
+<!-- <button type="button" disabled>Login</button> -->
 
 <img [src]="imagepath" alt="path not found">
 <br><br>

@@ -15,6 +15,8 @@ import { PracticeComponent } from './practice/practice.component';
 import { OtpVrrificationComponent } from './otp-vrrification/otp-vrrification.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { NewComponent } from './new/new.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     OtpVrrificationComponent,
     ProductlistComponent,
     TemplateDrivenFormComponent,
+    NewComponent,
+    EventBindingComponent,
     
   ],
   imports: [
